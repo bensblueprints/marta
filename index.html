@@ -12,8 +12,8 @@
             scroll-behavior: smooth;
         }
         .hero-bg {
-            background: url('marta Video intro.mp4') no-repeat center center fixed;
-            background-size: cover;
+            position: relative;
+            overflow: hidden;
         }
         
         .hero-bg video {
@@ -59,16 +59,20 @@
     <nav class="bg-white/80 backdrop-blur-md shadow-md fixed w-full z-50 top-0">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-amber-700">Yoga of Emotions®</a>
-            <div>
-                <a href="#experience" class="text-amber-600 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium">The Experience</a>
-                <a href="#program" class="text-amber-600 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium">Program</a>
-                <a href="#pricing" class="text-amber-600 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium">Invest</a>
-                <a href="#contact" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-md text-sm font-medium ml-2">Contact Us</a>
-            </div>
+                <div>
+                    <a href="#experience" class="text-amber-600 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium">The Experience</a>
+                    <a href="#program" class="text-amber-600 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium">Program</a>
+                    <a href="#pricing" class="text-amber-600 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium">Invest</a>
+                    <a href="about.html" class="text-amber-600 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="#contact" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-md text-sm font-medium ml-2">Contact Us</a>
+                </div>
         </div>
     </nav>
 
     <header class="hero-bg min-h-screen flex items-center justify-center pt-16">
+        <video autoplay muted loop playsinline>
+            <source src="/videos/marta Video intro.mp4" type="video/mp4">
+        </video>
         <div class="text-center bg-black/50 p-8 md:p-16 rounded-xl">
             <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight">
                 Ignite Your <span class="gradient-text bg-gradient-to-r from-orange-300 to-amber-400">Soul</span>.
@@ -160,13 +164,13 @@
             <p class="text-lg text-center max-w-3xl mx-auto mb-12 leading-relaxed">
                 During this transformative immersion, you will master the art of:
             </p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"><p class="text-md leading-relaxed text-amber-700 font-medium">Crafting & Leading deeply impactful Yoga of Emotions® sessions.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"><p class="text-md leading-relaxed text-amber-700 font-medium">Understanding the Sacred Dance between emotions, body, and spirit.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"><p class="text-md leading-relaxed text-amber-700 font-medium">Guiding Others through their own emotional landscapes with confidence and compassion.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"><p class="text-md leading-relaxed text-amber-700 font-medium">Harnessing powerful yogic techniques for profound healing and self-discovery.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"><p class="text-md leading-relaxed text-amber-700 font-medium">Embodying the principles of Yoga to live a more authentic and joyful life.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"><p class="text-md leading-relaxed text-amber-700 font-medium">Creating a Sacred Space for transformation and growth.</p></div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* Increased gap for better spacing */}
+                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out"><p class="text-md leading-relaxed text-amber-700 font-medium">Crafting & Leading deeply impactful Yoga of Emotions® sessions.</p></div>
+                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out"><p class="text-md leading-relaxed text-amber-700 font-medium">Understanding the Sacred Dance between emotions, body, and spirit.</p></div>
+                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out"><p class="text-md leading-relaxed text-amber-700 font-medium">Guiding Others through their own emotional landscapes with confidence and compassion.</p></div>
+                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out"><p class="text-md leading-relaxed text-amber-700 font-medium">Harnessing powerful yogic techniques for profound healing and self-discovery.</p></div>
+                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out"><p class="text-md leading-relaxed text-amber-700 font-medium">Embodying the principles of Yoga to live a more authentic and joyful life.</p></div>
+                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition-.shadow duration-300 ease-in-out"><p class="text-md leading-relaxed text-amber-700 font-medium">Creating a Sacred Space for transformation and growth.</p></div>
             </div>
         </div>
     </section>
@@ -176,7 +180,7 @@
             <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-8 text-center">Meet Your <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500">Guide</span>: Marta Metrass</h2>
             <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
                 <div class="md:w-1/3 text-center">
-                    <img src="https://placehold.co/400x400/FFE4C4/8B4513?text=Marta+Metrass" alt="Marta Metrass" class="rounded-full shadow-xl mx-auto w-64 h-64 md:w-80 md:h-80 object-cover">
+                    <img src="/images/Marta.png" alt="Marta Metrass" class="rounded-full shadow-xl mx-auto w-64 h-64 md:w-80 md:h-80 object-cover">
                 </div>
                 <div class="md:w-2/3">
                     <p class="text-lg mb-4 leading-relaxed">
@@ -215,10 +219,40 @@
                 Imagine yourself in a breathtaking paradise, a tranquil haven nestled in nature, an energetically charged sanctuary designed for deep immersion. This isn't just where we'll stay; it's the sacred ground where your transformation will take root and blossom.
             </p>
             <div class="grid md:grid-cols-2 gap-6">
-                <img src="https://placehold.co/600x400/FFF5EE/A0522D?text=Serene+Retreat+View+1" alt="Retreat Location 1" class="rounded-xl shadow-lg object-cover w-full h-64 md:h-80">
-                <img src="https://placehold.co/600x400/FAF0E6/8B4513?text=Peaceful+Yoga+Space" alt="Retreat Location 2" class="rounded-xl shadow-lg object-cover w-full h-64 md:h-80">
+                <img src="/images/image1-500x500-oxb0rca50pyalan0bl1q0sbx2bv8uykvgz2qxg49kg.jpg" alt="Serene Retreat View" class="rounded-xl shadow-lg object-cover w-full h-64 md:h-80">
+                <img src="/images/image2-500x500-oxb0re5tee0v8ika0luz5ruu93lzacsc58dpw01h80.jpg" alt="Peaceful Yoga Space" class="rounded-xl shadow-lg object-cover w-full h-64 md:h-80">
             </div>
             <p class="mt-8 text-md text-gray-600">Detailed location information will be shared upon registration.</p>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white"> <!-- Alternating background color -->
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12 text-center">A <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500">Visual Journey</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <div class="aspect-w-1 aspect-h-1">
+                    <img src="/images/image3-500x500-oxb0rg1hs23fvqhjpmo8ardrfvcppqzsthooujyovk.jpg" alt="Yoga pose in nature" class="object-cover w-full h-full rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
+                </div>
+                <div class="aspect-w-1 aspect-h-1">
+                    <img src="/images/Profile-Picture-2-Marta-Metrass-oc73ox0kekk6ruu1k15xwy15b70y52eukkcrjh7vgg.jpg" alt="Marta smiling" class="object-cover w-full h-full rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
+                </div>
+                <div class="aspect-w-1 aspect-h-1">
+                    <img src="/images/marta 2.png" alt="Marta in a thoughtful pose" class="object-cover w-full h-full rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
+                </div>
+                <div class="aspect-w-1 aspect-h-1">
+                    <img src="/images/image1-500x500-oxb0rca50pyalan0bl1q0sbx2bv8uykvgz2qxg49kg.jpg" alt="Scenic yoga background" class="object-cover w-full h-full rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
+                </div>
+                <!-- You can add more images here from your Assets/pictures folder -->
+                <!-- Example for user-provided images (once they are in Assets/pictures/):
+                <div class="aspect-w-1 aspect-h-1">
+                    <img src="/public/images/user_image_1.jpg" alt="User image 1" class="object-cover w-full h-full rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
+                </div>
+                <div class="aspect-w-1 aspect-h-1">
+                    <img src="/public/images/user_image_8.jpg" alt="User image 8" class="object-cover w-full h-full rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
+                </div>
+                -->
+            </div>
+            <p class="mt-8 text-lg text-stone-600">Explore the transformative atmosphere of Yoga of Emotions®.</p>
         </div>
     </section>
 
@@ -257,12 +291,12 @@
             <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-8 text-center">Hear the <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500">Whispers</span>: What Our Graduates Say</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl p-8 text-center">
-                    <img src="https://placehold.co/100x100/FFEBCD/8B4513?text=A" alt="Graduate Avatar" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-amber-200">
+                    <img src="/images/Profile-Picture-4-Marta-Metrass-oc73p0rx5wpc2aoky2sg6x2zoqiezutrx2ypgl2ark.jpg" alt="Graduate Avatar" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-amber-200 object-cover">
                     <p class="text-lg italic text-stone-700 mb-4">"This training didn't just teach me yoga; it gave me back to myself. An absolutely life-changing experience."</p>
                     <p class="font-semibold text-amber-700">- Alexandra P.</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl p-8 text-center">
-                    <img src="https://placehold.co/100x100/FFDAB9/A0522D?text=M" alt="Graduate Avatar" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-amber-200">
+                    <img src="/images/Profile-Picture-8-Marta-Metrass-oc73p8amokzmn6dnq61gqv6ofthcpfnmm46lasr5ds.jpg" alt="Graduate Avatar" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-amber-200 object-cover">
                     <p class="text-lg italic text-stone-700 mb-4">"An unforgettable journey of depth, connection, and pure magic. Marta is an incredible guide."</p>
                     <p class="font-semibold text-amber-700">- Michael B.</p>
                 </div>

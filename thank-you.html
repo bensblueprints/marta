@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga of Emotions® - Thank You</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFF8F0; /* Light amber background */
+            color: #4A3B31; /* Dark brown text */
+        }
+        .nav-link {
+            @apply px-3 py-2 rounded-md text-sm font-medium text-amber-700 hover:bg-amber-500 hover:text-white;
+        }
+        .btn-primary {
+            @apply bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out;
+        }
+        .section-title {
+            @apply text-3xl font-bold text-center text-amber-700 mb-8;
+        }
+        .card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden p-6;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0">
+                        <img class="h-10 w-auto" src="martametrass-identidadevisual-logo-web.png" alt="Yoga of Emotions Logo">
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="online-classes.html" class="nav-link">Online Classes</a>
+                        <a href="retreats.html" class="nav-link">Retreats</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <!-- <a href="teacher-training.html" class="nav-link">Teacher Training</a> -->
+                        <!-- <a href="blog.html" class="nav-link">Blog</a> -->
+                        <!-- <a href="contact.html" class="nav-link">Contact</a> -->
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="bg-amber-100 inline-flex items-center justify-center p-2 rounded-md text-amber-700 hover:text-amber-800 hover:bg-amber-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="nav-link block">Home</a>
+                <a href="online-classes.html" class="nav-link block">Online Classes</a>
+                <a href="retreats.html" class="nav-link block">Retreats</a>
+                <a href="about.html" class="nav-link block">About</a>
+                <!-- <a href="teacher-training.html" class="nav-link block">Teacher Training</a> -->
+                <!-- <a href="blog.html" class="nav-link block">Blog</a> -->
+                <!-- <a href="contact.html" class="nav-link block">Contact</a> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="card">
+                <div class="mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-green-100 mb-6">
+                    <svg class="h-10 w-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h1 class="text-4xl font-extrabold text-amber-800 mb-4">Thank You!</h1>
+                <p class="text-xl text-gray-700 mb-6">
+                    Your submission has been received. We appreciate you reaching out.
+                </p>
+
+                <div class="text-left text-gray-600 space-y-4 mb-8">
+                    <h2 class="text-2xl font-semibold text-amber-700">What Happens Next?</h2>
+                    <p>If your message requires a response, one of our team members will be in touch with you shortly, typically within 1-2 business days.</p>
+                    <p>In the meantime, feel free to explore more of what Yoga of Emotions® has to offer:</p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Discover our <a href="online-classes.html" class="text-amber-600 hover:underline">Online Classes</a>.</li>
+                        <li>Learn about upcoming <a href="retreats.html" class="text-amber-600 hover:underline">Retreats</a>.</li>
+                        <li>Read our latest articles on the (Coming Soon) Blog.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-8">
+                    <a href="index.html" class="btn-primary">Return to Homepage</a>
+                </div>
+
+                <div class="border-t border-gray-200 pt-8">
+                    <h3 class="text-xl font-semibold text-amber-700 mb-3">Stay Connected</h3>
+                    <p class="text-gray-600 mb-4">Follow us on social media and subscribe to our newsletter for the latest updates, tips, and special offers.</p>
+                    <div class="flex justify-center space-x-4 mb-6">
+                        <a href="#" class="text-amber-600 hover:text-amber-800">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-amber-600 hover:text-amber-800">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919A110.942 110.942 0 0112 2.163zm0 1.802C9.042 3.965 8.72 3.977 7.474 4.032c-2.45.112-3.648 1.308-3.756 3.756-.055 1.246-.067 1.568-.067 4.212s.012 2.966.067 4.212c.107 2.448 1.306 3.648 3.756 3.756 1.246.055 1.568.067 4.212.067s2.966-.012 4.212-.067c2.448-.107 3.648-1.306 3.756-3.756.055-1.246.067-1.568.067-4.212s-.012-2.966-.067-4.212c-.107-2.448-1.306-3.648-3.756-3.756A109.195 109.195 0 0012 3.965zm0 3.078a5.032 5.032 0 100 10.064 5.032 5.032 0 000-10.064zm0 1.802a3.23 3.23 0 110 6.46 3.23 3.23 0 010-6.46zM20.405 5.004a1.323 1.323 0 100 2.646 1.323 1.323 0 000-2.646z" /></svg>
+                        </a>
+                        <a href="#" class="text-amber-600 hover:text-amber-800">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.75 5.5a.75.75 0 00-.75-.75H5a.75.75 0 00-.75.75v13.5c0 .414.336.75.75.75h14a.75.75 0 00.75-.75V5.5zm-1.5 0H5.75v1.28l6.5 4.596 6.5-4.596V5.5zm0 12H5.75V7.539l6.25 4.42 6.25-4.42V17.5z"/></svg>
+                        </a>
+                    </div>
+                    <form class="max-w-md mx-auto">
+                        <label for="newsletter-email" class="block text-sm font-medium text-gray-700">Subscribe to our Newsletter:</label>
+                        <div class="mt-1 flex rounded-md shadow-sm">
+                            <input type="email" name="newsletter-email" id="newsletter-email" class="focus:ring-amber-500 focus:border-amber-500 flex-1 block w-full rounded-none rounded-l-md sm:text-sm border-gray-300 p-2" placeholder="you@example.com">
+                            <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-r-md text-white bg-amber-600 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500">
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amber-700 text-amber-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <img src="martametrass-identidadevisual-logo-web.png" alt="Yoga of Emotions Logo" class="h-12 w-auto mx-auto mb-4 opacity-80">
+            <p class="mb-2">&copy; 2025 Yoga of Emotions®. All rights reserved.</p>
+            <p class="text-sm">Transform your life, one breath at a time.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Terms of Service</a>
+                <a href="#" class="hover:text-white">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => {
+                const expanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
+                menuButton.setAttribute('aria-expanded', !expanded);
+                mobileMenu.classList.toggle('hidden');
+                menuButton.querySelectorAll('svg').forEach(icon => icon.classList.toggle('hidden'));
+            });
+        }
+    </script>
+</body>
+</html>
