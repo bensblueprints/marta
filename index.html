@@ -3,17 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoga of Emotions® Teacher Training</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Yoga of Emotions® - Transform your life through emotional yoga practices, online courses, and transformative retreats with Marta Metrass">
+    <meta name="keywords" content="yoga, emotional yoga, yoga retreats, online yoga courses, Marta Metrass, Yoga of Emotions">
+    <title>Yoga of Emotions® | Transform Your Life Through Yoga</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/Assets/favicon.png">
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
+        :root {
+            --primary-color: #B45309;
+            --secondary-color: #F97316;
+            --accent-color: #F59E0B;
+            --text-color: #44403C;
+            --background-color: #FFFBEB;
+        }
+        
         body {
             font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
             scroll-behavior: smooth;
         }
+        
         .hero-bg {
             position: relative;
             overflow: hidden;
+            min-height: 100vh;
         }
         
         .hero-bg video {
@@ -25,359 +47,265 @@
             object-fit: cover;
             z-index: -1;
         }
-
-        .cta-button {
-            @apply inline-block bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out;
+        
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
         }
+        
+        .nav-link {
+            @apply text-amber-600 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+        }
+        
+        .nav-link-active {
+            @apply bg-amber-600 text-white hover:bg-amber-700;
+        }
+        
+        .cta-button {
+            @apply inline-block bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105;
+        }
+        
         .section-title {
             @apply text-4xl md:text-5xl font-bold text-amber-800 mb-8 text-center;
         }
-        .card {
-            @apply bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl;
-        }
+        
         .gradient-text {
             @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500;
         }
-        /* Custom scrollbar for a more subtle look */
+        
+        .card {
+            @apply bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl;
+        }
+        
+        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
+        
         ::-webkit-scrollbar-track {
-            background: #FFF0E5; /* Light cream background for the track */
+            background: #FFF0E5;
         }
+        
         ::-webkit-scrollbar-thumb {
-            background: #A0522D; /* Sienna color for the thumb */
+            background: #A0522D;
             border-radius: 4px;
         }
+        
         ::-webkit-scrollbar-thumb:hover {
-            background: #8B4513; /* Darker sienna on hover */
+            background: #8B4513;
         }
     </style>
 </head>
-<body class="bg-cream-50 text-stone-700 antialiased">
-
-    <nav class="bg-white/80 backdrop-blur-md shadow-md fixed w-full z-50 top-0">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-amber-700">Yoga of Emotions®</a>
-                <div>
-                    <a href="#experience" class="text-amber-600 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium">The Experience</a>
-                    <a href="#program" class="text-amber-600 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium">Program</a>
-                    <a href="#pricing" class="text-amber-600 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium">Invest</a>
-                    <a href="about.html" class="text-amber-600 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium">About</a>
-                    <a href="#contact" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-md text-sm font-medium ml-2">Contact Us</a>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-md fixed w-full z-50 top-0">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-amber-700">Yoga of Emotions®</a>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#courses" class="nav-link">Online Courses</a>
+                    <a href="#retreats" class="nav-link">Retreats</a>
+                    <a href="#testimonials" class="nav-link">Testimonials</a>
+                    <a href="#contact" class="nav-link-active">Contact</a>
                 </div>
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-amber-600 hover:text-amber-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <header class="hero-bg min-h-screen flex items-center justify-center pt-16">
-        <video autoplay muted loop playsinline>
-            <source src="/videos/marta Video intro.mp4" type="video/mp4">
+    <!-- Hero Section -->
+    <header class="hero-bg flex items-center justify-center pt-16">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="Assets/videos/marta Video intro.mp4" type="video/mp4">
         </video>
-        <div class="text-center bg-black/50 p-8 md:p-16 rounded-xl">
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight">
-                Ignite Your <span class="gradient-text bg-gradient-to-r from-orange-300 to-amber-400">Soul</span>.
-                Awaken Your <span class="gradient-text bg-gradient-to-r from-orange-300 to-amber-400">Power</span>.
-                Become the <span class="gradient-text bg-gradient-to-r from-orange-300 to-amber-400">Emotion</span>.
+        <div class="hero-overlay text-center p-8 md:p-16 rounded-xl max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+                Transform Your Life Through
+                <span class="gradient-text">Yoga of Emotions®</span>
             </h1>
-            <p class="text-xl md:text-2xl text-amber-100 mt-6 mb-10">Yoga of Emotions® Teacher Training</p>
-            <p class="text-lg md:text-xl text-amber-200 font-semibold mb-12">The Ultimate Journey to Your Authentic Self
-                <br class="hidden md:block">2nd Edition ◆ October 15th - November 6th
+            <p class="text-xl md:text-2xl text-amber-100 mb-8">
+                Discover the power of emotional yoga with online courses and transformative retreats
             </p>
-            <a href="#experience" class="cta-button text-lg">Discover the Journey</a>
-            <p class="text-xs text-gray-300 mt-4">(Note: Dates mentioned are for a past event. This page can be adapted for future trainings.)</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#courses" class="cta-button">Start Your Journey</a>
+                <a href="#retreats" class="cta-button bg-transparent border-2 border-white hover:bg-white/10">Explore Retreats</a>
+            </div>
         </div>
     </header>
 
-    <section class="py-16 md:py-24 bg-orange-50">
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="section-title">Are You Ready to Dive <span class="gradient-text">Deeper</span> Than Ever Before?</h2>
-            <p class="text-lg md:text-xl text-center max-w-3xl mx-auto mb-12 leading-relaxed">
-                The Yoga of Emotions® isn't just a practice; it's a <strong class="text-amber-700">revolution of the self</strong>. We believe Yoga is a potent, life-altering force—a sacred pathway to the very core of your being. This is more than physical postures; it's an invitation to embrace your soul, unleash your truth, and radically transform your life.
-            </p>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="p-6 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
-                    <h3 class="text-2xl font-semibold text-amber-700 mb-3">Connect Within</h3>
-                    <p>Journey beyond the physical and connect with the vibrant landscape of your inner world.</p>
-                </div>
-                <div class="p-6 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
-                    <h3 class="text-2xl font-semibold text-amber-700 mb-3">Unlock Wisdom</h3>
-                    <p>Unlock the profound wisdom held within your emotions, turning them into your greatest allies.</p>
-                </div>
-                <div class="p-6 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
-                    <h3 class="text-2xl font-semibold text-amber-700 mb-3">Guide Others</h3>
-                    <p>Guide others to find their own healing, peace, and unshakeable joy through this transformative method.</p>
-                </div>
-            </div>
-            <p class="text-lg md:text-xl text-center max-w-3xl mx-auto mt-12 font-medium text-amber-800 leading-relaxed">
-                The YOGA OF EMOTIONS® is your sacred passage. We guide you on an exhilarating voyage beyond the body, into the heart of your soul, empowering you to uncover and live your deepest truth.
-            </p>
-        </div>
-    </section>
-
-    <section id="experience" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-8 text-center">Become a <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500">Beacon</span>: The Experience</h2>
-            <p class="text-lg text-center max-w-3xl mx-auto mb-12 leading-relaxed">
-                Each day, we'll immerse ourselves in a rich tapestry of ancient wisdom and modern insight. Through a sensual blend of practices, every session becomes a unique exploration, a theme woven into the fabric of your being.
-            </p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl p-6">
-                    <h3 class="text-xl font-semibold text-amber-700 mb-2">Dynamic Asana</h3>
-                    <p>Flow with intention and grace, connecting movement with emotion.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl p-6">
-                    <h3 class="text-xl font-semibold text-amber-700 mb-2">Expansive Pranayama</h3>
-                    <p>Breathe life into your deepest potential, energizing your entire being.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl p-6">
-                    <h3 class="text-xl font-semibold text-amber-700 mb-2">Profound Visualization & Meditation</h3>
-                    <p>Journey into the landscapes of your mind, finding clarity and peace.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl p-6">
-                    <h3 class="text-xl font-semibold text-amber-700 mb-2">Resonant Mantra</h3>
-                    <p>Vibrate with the sound of creation, attuning to higher frequencies.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl p-6">
-                    <h3 class="text-xl font-semibold text-amber-700 mb-2">Powerful Bandha & Mudra</h3>
-                    <p>Channel your energy with precision, unlocking inner power.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl p-6">
-                    <h3 class="text-xl font-semibold text-amber-700 mb-2">Sacred Ceremony & Philosophy</h3>
-                    <p>Connect with ancient rituals and uncover secrets to a meaningful life.</p>
-                </div>
-            </div>
-            <p class="text-lg md:text-xl text-center max-w-3xl mx-auto mb-8 leading-relaxed">
-                This isn't just learning; it's <strong class="text-amber-700">healing</strong>. It's <strong class="text-amber-700">alchemy</strong>. Consistent practice will unfurl the radiant, authentic YOU. You'll emerge more centered, exquisitely conscious, deeply at peace, utterly fulfilled, and vibrantly happy.
-            </p>
-            <p class="text-lg md:text-xl text-center max-w-3xl mx-auto mb-12 font-medium text-amber-800 leading-relaxed">
-                This is a journey to FEEL, to RECOGNIZE, to SAVOR every delicious step, without racing to a destination. The magic is in the unfolding.
-            </p>
-            <div class="text-center">
-                <a href="#testimonials" class="cta-button">Discover the Magic of Past Journeys</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="program" class="py-16 md:py-24 bg-amber-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-8 text-center">Unlock Your Inner <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500">Alchemist</span>: The Program</h2>
-            <p class="text-lg text-center max-w-3xl mx-auto mb-12 leading-relaxed">
-                During this transformative immersion, you will master the art of:
-            </p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* Increased gap for better spacing */}
-                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out"><p class="text-md leading-relaxed text-amber-700 font-medium">Crafting & Leading deeply impactful Yoga of Emotions® sessions.</p></div>
-                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out"><p class="text-md leading-relaxed text-amber-700 font-medium">Understanding the Sacred Dance between emotions, body, and spirit.</p></div>
-                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out"><p class="text-md leading-relaxed text-amber-700 font-medium">Guiding Others through their own emotional landscapes with confidence and compassion.</p></div>
-                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out"><p class="text-md leading-relaxed text-amber-700 font-medium">Harnessing powerful yogic techniques for profound healing and self-discovery.</p></div>
-                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out"><p class="text-md leading-relaxed text-amber-700 font-medium">Embodying the principles of Yoga to live a more authentic and joyful life.</p></div>
-                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition-.shadow duration-300 ease-in-out"><p class="text-md leading-relaxed text-amber-700 font-medium">Creating a Sacred Space for transformation and growth.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-8 text-center">Meet Your <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500">Guide</span>: Marta Metrass</h2>
-            <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
-                <div class="md:w-1/3 text-center">
-                    <img src="/images/Marta.png" alt="Marta Metrass" class="rounded-full shadow-xl mx-auto w-64 h-64 md:w-80 md:h-80 object-cover">
+            <h2 class="section-title">Meet Marta Metrass</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3">
+                    <img src="Assets/pictures/Marta.png" alt="Marta Metrass" class="rounded-full shadow-xl w-64 h-64 md:w-80 md:h-80 object-cover mx-auto">
                 </div>
                 <div class="md:w-2/3">
-                    <p class="text-lg mb-4 leading-relaxed">
-                        Marta Metrass is more than a teacher; she's a visionary, a guide, and a catalyst for profound change. With years of dedicated experience and a deep understanding of yogic traditions and emotional intelligence, Marta has dedicated her life to exploring the depths of yoga.
+                    <p class="text-lg mb-6 leading-relaxed">
+                        I'm a heart-driven yoga teacher dedicated to helping you transform your life through the power of emotional yoga. With years of experience and a deep understanding of yogic traditions, I've developed the Yoga of Emotions® method to guide you on a journey of self-discovery and healing.
                     </p>
-                    <p class="text-lg mb-4 leading-relaxed">
-                        Her passion is to empower you to connect with your inner wisdom and unlock your limitless potential. She creates a nurturing and inspiring environment where true transformation can occur. Prepare to be inspired and guided with warmth and expertise.
+                    <p class="text-lg mb-6 leading-relaxed">
+                        My mission is to empower you to connect with your inner wisdom and unlock your limitless potential. Through online courses and transformative retreats, I create a nurturing environment where true transformation can occur.
                     </p>
                     <blockquote class="border-l-4 border-amber-500 pl-4 italic text-amber-700 my-6">
-                        "My mission is to help you uncover the radiant truth of who you are, and to equip you with the tools to share that light with the world." - Marta Metrass (Example Quote)
+                        "Love is above all things. When we embrace our spiritual hearts and cultivate love and kindness towards ourselves and others, we change our lives and contribute to changing the world."
                     </blockquote>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 md:py-24 bg-orange-50">
+    <!-- Online Courses Section -->
+    <section id="courses" class="py-20 bg-amber-50">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-8 text-center">Dive <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500">Deep</span>: Themes We Will Explore</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
-                <div class="flex items-start space-x-3"><svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><p class="text-lg text-amber-800">The Alchemy of Emotions: Turning Challenges into Strengths</p></div>
-                <div class="flex items-start space-x-3"><svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><p class="text-lg text-amber-800">Sacred Anatomy: The Body as a Vessel of Wisdom</p></div>
-                <div class="flex items-start space-x-3"><svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><p class="text-lg text-amber-800">The Power of Vulnerability & Authentic Connection</p></div>
-                <div class="flex items-start space-x-3"><svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><p class="text-lg text-amber-800">Healing Through Movement, Breath & Sound</p></div>
-                <div class="flex items-start space-x-3"><svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><p class="text-lg text-amber-800">Crafting Transformative Yoga Experiences</p></div>
-                <div class="flex items-start space-x-3"><svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><p class="text-lg text-amber-800">The Business of Soul: Sharing Your Unique Gifts</p></div>
-            </div>
-            <p class="text-center text-xl mt-10 text-amber-700 font-semibold">...And so much more, unveiled as our journey unfolds.</p>
-        </div>
-    </section>
-
-    <section class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-8 text-center">Your <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500">Sanctuary</span>: The Setting</h2>
-            <p class="text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-                Imagine yourself in a breathtaking paradise, a tranquil haven nestled in nature, an energetically charged sanctuary designed for deep immersion. This isn't just where we'll stay; it's the sacred ground where your transformation will take root and blossom.
+            <h2 class="section-title">Transform Your Practice with <span class="gradient-text">Online Courses</span></h2>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-12">
+                Start your journey to emotional freedom and physical wellness with our comprehensive online courses. Learn at your own pace, from anywhere in the world.
             </p>
-            <div class="grid md:grid-cols-2 gap-6">
-                <img src="/images/image1-500x500-oxb0rca50pyalan0bl1q0sbx2bv8uykvgz2qxg49kg.jpg" alt="Serene Retreat View" class="rounded-xl shadow-lg object-cover w-full h-64 md:h-80">
-                <img src="/images/image2-500x500-oxb0re5tee0v8ika0luz5ruu93lzacsc58dpw01h80.jpg" alt="Peaceful Yoga Space" class="rounded-xl shadow-lg object-cover w-full h-64 md:h-80">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">Free Guide</h3>
+                        <p class="mb-4">Begin your journey with our free guide to emotional yoga. Learn the basics and discover how to start your practice.</p>
+                        <a href="#contact" class="text-amber-600 hover:text-amber-800 font-medium">Get Your Free Guide →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">Video Coaching</h3>
+                        <p class="mb-4">Receive personalized guidance through video coaching sessions. Get feedback and support for your practice.</p>
+                        <a href="#contact" class="text-amber-600 hover:text-amber-800 font-medium">Learn More →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">Full Courses</h3>
+                        <p class="mb-4">Dive deep with comprehensive courses covering all aspects of the Yoga of Emotions® method.</p>
+                        <a href="#contact" class="text-amber-600 hover:text-amber-800 font-medium">View Courses →</a>
+                    </div>
+                </div>
             </div>
-            <p class="mt-8 text-md text-gray-600">Detailed location information will be shared upon registration.</p>
         </div>
     </section>
 
-    <section class="py-16 md:py-24 bg-white"> <!-- Alternating background color -->
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-12 text-center">A <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500">Visual Journey</span></h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                <div class="aspect-w-1 aspect-h-1">
-                    <img src="/images/image3-500x500-oxb0rg1hs23fvqhjpmo8ardrfvcppqzsthooujyovk.jpg" alt="Yoga pose in nature" class="object-cover w-full h-full rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
-                </div>
-                <div class="aspect-w-1 aspect-h-1">
-                    <img src="/images/Profile-Picture-2-Marta-Metrass-oc73ox0kekk6ruu1k15xwy15b70y52eukkcrjh7vgg.jpg" alt="Marta smiling" class="object-cover w-full h-full rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
-                </div>
-                <div class="aspect-w-1 aspect-h-1">
-                    <img src="/images/marta 2.png" alt="Marta in a thoughtful pose" class="object-cover w-full h-full rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
-                </div>
-                <div class="aspect-w-1 aspect-h-1">
-                    <img src="/images/image1-500x500-oxb0rca50pyalan0bl1q0sbx2bv8uykvgz2qxg49kg.jpg" alt="Scenic yoga background" class="object-cover w-full h-full rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
-                </div>
-                <!-- You can add more images here from your Assets/pictures folder -->
-                <!-- Example for user-provided images (once they are in Assets/pictures/):
-                <div class="aspect-w-1 aspect-h-1">
-                    <img src="/public/images/user_image_1.jpg" alt="User image 1" class="object-cover w-full h-full rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
-                </div>
-                <div class="aspect-w-1 aspect-h-1">
-                    <img src="/public/images/user_image_8.jpg" alt="User image 8" class="object-cover w-full h-full rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
-                </div>
-                -->
-            </div>
-            <p class="mt-8 text-lg text-stone-600">Explore the transformative atmosphere of Yoga of Emotions®.</p>
-        </div>
-    </section>
-
-    <section id="investment" class="py-16 md:py-24 bg-amber-50">
+    <!-- Retreats Section -->
+    <section id="retreats" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-8 text-center">Your Investment in an <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500">Extraordinary Life</span></h2>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-amber-500">
-                    <h3 class="text-2xl font-bold text-amber-700 mb-6">What's Included: <br><span class="text-lg font-medium">Your All-Access Pass to Transformation</span></h3>
-                    <ul class="space-y-3 text-stone-700">
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Full Yoga of Emotions® Teacher Training & Certification</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Comprehensive Training Manual & Materials</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>[Number] Nights of Soul-Nourishing Accommodation at [Location Name]</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Delicious, High-Vibration Meals (e.g., Daily Breakfast & Lunch, Welcome & Farewell Dinners)</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Transformational Workshops & Ceremonies</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Access to an Exclusive Community of Like-Minded Souls</li>
-                        </ul>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-red-400">
-                    <h3 class="text-2xl font-bold text-red-600 mb-6">What's Not Included: <br><span class="text-lg font-medium">Plan Your Journey</span></h3>
-                    <ul class="space-y-3 text-stone-700">
-                        <li class="flex items-start"><svg class="w-5 h-5 text-red-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path></svg>Flights & Travel to the Venue</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-red-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path></svg>Personal Expenses</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-red-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path></svg>Medical Expenses & Travel Insurance (Highly Recommended)</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-red-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path></svg>Airport Transfers (Can be arranged for an additional cost)</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-red-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path></svg>Dinners (Except first and last evenings)</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-red-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path></svg>Indonesian Entry Visas (If applicable)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-8 text-center">Hear the <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500">Whispers</span>: What Our Graduates Say</h2>
+            <h2 class="section-title">Transformative <span class="gradient-text">Retreats</span></h2>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-12">
+                Immerse yourself in a life-changing experience. Our retreats combine yoga, meditation, and emotional healing in beautiful locations around the world.
+            </p>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl p-8 text-center">
-                    <img src="/images/Profile-Picture-4-Marta-Metrass-oc73p0rx5wpc2aoky2sg6x2zoqiezutrx2ypgl2ark.jpg" alt="Graduate Avatar" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-amber-200 object-cover">
-                    <p class="text-lg italic text-stone-700 mb-4">"This training didn't just teach me yoga; it gave me back to myself. An absolutely life-changing experience."</p>
-                    <p class="font-semibold text-amber-700">- Alexandra P.</p>
+                <div class="card">
+                    <img src="Assets/pictures/image1-500x500-oxb0rca50pyalan0bl1q0sbx2bv8uykvgz2qxg49kg.jpg" alt="Retreat Location" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">Upcoming Retreats</h3>
+                        <p class="mb-4">Join us for an immersive experience that will transform your life. Limited spots available.</p>
+                        <a href="#contact" class="cta-button">Book Your Spot</a>
+                    </div>
                 </div>
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl p-8 text-center">
-                    <img src="/images/Profile-Picture-8-Marta-Metrass-oc73p8amokzmn6dnq61gqv6ofthcpfnmm46lasr5ds.jpg" alt="Graduate Avatar" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-amber-200 object-cover">
-                    <p class="text-lg italic text-stone-700 mb-4">"An unforgettable journey of depth, connection, and pure magic. Marta is an incredible guide."</p>
-                    <p class="font-semibold text-amber-700">- Michael B.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl p-8 text-center md:col-span-2">
-                    <p class="text-lg text-stone-600">Be the first to share your transformation from our upcoming edition! We can't wait to hear your story.</p>
+                <div class="card">
+                    <img src="Assets/pictures/image2-500x500-oxb0re5tee0v8ika0luz5ruu93lzacsc58dpw01h80.jpg" alt="Yoga Practice" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-amber-700 mb-4">Custom Retreats</h3>
+                        <p class="mb-4">Create your own private retreat experience. Perfect for groups or special occasions.</p>
+                        <a href="#contact" class="cta-button">Learn More</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="py-16 md:py-24 bg-orange-50">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-8 text-center">Embrace Your <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500">Calling</span>: Secure Your Place</h2>
-            <p class="text-lg max-w-2xl mx-auto mb-6">
-                REGISTRATION FOR THE 2ND EDITION (Oct 15 - Nov 6) WAS OPEN: May 12th - August 30th, 2023.
-            </p>
-            <p class="text-md max-w-2xl mx-auto mb-10 text-amber-700 font-medium">
-                (This page can be updated for future editions: "LIMITED SPOTS AVAILABLE! SECURE YOUR TRANSFORMATION TODAY!")
-            </p>
-            <p class="text-lg max-w-2xl mx-auto mb-10">
-                A non-refundable and non-transferable deposit of <strong class="text-amber-700">$480 USD</strong> secures your sacred spot. (All values are in US Dollars)
-            </p>
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl p-8 hover:scale-105">
-                    <h3 class="text-3xl font-bold text-amber-700 mb-3">Full Commitment</h3>
-                    <p class="text-5xl font-extrabold text-amber-600 mb-4">$3,900 <span class="text-lg font-normal text-stone-500">USD</span></p>
-                    <p class="text-sm text-stone-600 mb-6">(Full payment by August 30th, 2023. The $480 deposit is deducted from this total).</p>
-                    <a href="#" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out w-full block text-center">Invest in Your Radiance</a>
-                    <p class="text-xs mt-2 text-gray-500">(Link to payment/registration)</p>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-amber-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">What Our Students Say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card p-6">
+                    <p class="text-lg mb-4">"Marta's teaching has transformed my life. Her approach to emotional yoga is unique and powerful."</p>
+                    <p class="font-semibold text-amber-700">- Sarah M.</p>
                 </div>
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl p-8 hover:scale-105">
-                    <h3 class="text-3xl font-bold text-amber-700 mb-3">Flowing Grace Plan</h3>
-                    <p class="text-5xl font-extrabold text-amber-600 mb-4">$4,100 <span class="text-lg font-normal text-stone-500">USD</span></p>
-                    <p class="text-sm text-stone-600 mb-2">Paid in 3 empowering installments after your deposit:</p>
-                    <ul class="text-sm text-stone-600 mb-6 list-disc list-inside text-left ml-4">
-                        <li>Deposit: $480 (Non-refundable, non-transferable)</li>
-                        <li>1st Installment: $1206 - by February 15th</li>
-                        <li>2nd Installment: $1206 - by June 15th</li>
-                        <li>3rd Installment: $1206 - by September 15th</li>
+                <div class="card p-6">
+                    <p class="text-lg mb-4">"The retreat was life-changing. I've never felt more connected to myself and others."</p>
+                    <p class="font-semibold text-amber-700">- John D.</p>
+                </div>
+                <div class="card p-6">
+                    <p class="text-lg mb-4">"The online courses are comprehensive and accessible. I've learned so much about myself."</p>
+                    <p class="font-semibold text-amber-700">- Maria L.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Start Your <span class="gradient-text">Journey</span></h2>
+            <div class="max-w-2xl mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"></textarea>
+                    </div>
+                    <button type="submit" class="cta-button w-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Yoga of Emotions®</h3>
+                    <p class="text-amber-100">Transform your life through the power of emotional yoga.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-amber-100 hover:text-white">About</a></li>
+                        <li><a href="#courses" class="text-amber-100 hover:text-white">Courses</a></li>
+                        <li><a href="#retreats" class="text-amber-100 hover:text-white">Retreats</a></li>
+                        <li><a href="#contact" class="text-amber-100 hover:text-white">Contact</a></li>
                     </ul>
-                    <a href="#" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out w-full block text-center">Begin with Ease</a>
-                     <p class="text-xs mt-2 text-gray-500">(Link to payment/registration)</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-amber-100 hover:text-white">Instagram</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white">Facebook</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white">YouTube</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-amber-100 mb-4">Stay updated with our latest courses and retreats.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-l-md w-full focus:outline-none">
+                        <button type="submit" class="bg-amber-600 hover:bg-amber-700 px-4 py-2 rounded-r-md">Subscribe</button>
+                    </form>
                 </div>
             </div>
-            <a href="#" class="inline-block mt-10 text-amber-600 hover:text-amber-800 underline">View Full Payment Conditions</a>
-        </div>
-    </section>
-
-    <footer id="contact" class="bg-amber-800 text-amber-100 py-16">
-        <div class="container mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold mb-6">Yoga of Emotions® Teacher Training</h3>
-            <p class="mb-2">2nd Edition ◆ October 15th - November 6th</p>
-            <p class="mb-8">Questions Whispering to Your Soul? We'd love to connect.</p>
-            <a href="mailto:info@yogaofemotions.com" class="inline-block bg-white text-amber-700 hover:bg-amber-50 font-semibold py-3 px-8 rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out">Contact Us</a>
-            <p class="mt-10 text-sm text-amber-300">&copy; <span id="currentYear"></span> Yoga of Emotions®. All Rights Reserved. Site designed with <span class="text-red-400">&hearts;</span>.</p>
+            <div class="border-t border-amber-800 mt-8 pt-8 text-center">
+                <p class="text-amber-100">&copy; 2024 Yoga of Emotions®. All rights reserved.</p>
+            </div>
         </div>
     </footer>
-
-    <script>
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Set current year in footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Simple parallax effect for hero (optional, can be enhanced)
-        window.addEventListener('scroll', function() {
-            const hero = document.querySelector('.hero-bg');
-            if (hero) {
-                let offset = window.pageYOffset;
-                hero.style.backgroundPositionY = offset * 0.5 + 'px';
-            }
-        });
-    </script>
-
 </body>
 </html>
