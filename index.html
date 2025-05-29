@@ -97,11 +97,13 @@
     </style>
 </head>
 <body class="antialiased">
-    <!-- Navigation -->
+<!-- Navigation -->
     <nav class="bg-white/90 backdrop-blur-md shadow-md fixed w-full z-50 top-0">
         <div class="container mx-auto px-6 py-3">
             <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-amber-700">Yoga of Emotions®</a>
+                <a href="/" class="flex-shrink-0">
+                    <img class="h-10 w-auto" src="martametrass-identidadevisual-logo-web.png" alt="Yoga of Emotions Logo">
+                </a>
                 <div class="hidden md:flex space-x-4">
                     <a href="about.html" class="nav-link">About</a>
                     <a href="online-classes.html" class="nav-link">Online Classes</a>
@@ -136,8 +138,8 @@
 
     <!-- Hero Section -->
     <header class="hero-bg flex items-center justify-center pt-16">
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="Assets/videos/marta Video intro.mp4" type="video/mp4">
+        <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+            <source src="Public/videos/marta Video intro.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay text-center p-8 md:p-16 rounded-xl max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
@@ -160,7 +162,7 @@
             <h2 class="section-title">Meet Marta Metrass</h2>
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/3">
-                    <img src="Assets/pictures/Marta.png" alt="Marta Metrass" class="rounded-full shadow-xl w-64 h-64 md:w-80 md:h-80 object-cover mx-auto">
+                    <img src="Public/images/Marta.png" alt="Marta Metrass" class="rounded-full shadow-xl w-64 h-64 md:w-80 md:h-80 object-cover mx-auto">
                 </div>
                 <div class="md:w-2/3">
                     <p class="text-lg mb-6 leading-relaxed">
@@ -172,6 +174,48 @@
                     <blockquote class="border-l-4 border-amber-500 pl-4 italic text-amber-700 my-6">
                         "Love is above all things. When we embrace our spiritual hearts and cultivate love and kindness towards ourselves and others, we change our lives and contribute to changing the world."
                     </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I Offer Section -->
+    <section id="offerings" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">What I Offer</h2>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-12">
+                Discover the transformative power of Yoga of Emotions® through my personalized offerings designed to meet you wherever you are on your journey.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Online Classes</h3>
+                    <p class="mb-4">Join my live and on-demand classes from anywhere in the world. Experience the transformative power of Yoga of Emotions® from the comfort of your home.</p>
+                    <a href="online-classes.html" class="inline-block font-medium text-gray-700 hover:text-black">Learn More →</a>
+                </div>
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Transformative Retreats</h3>
+                    <p class="mb-4">Immerse yourself in a life-changing experience with my retreats in beautiful locations around the world, including our exclusive Bali retreat.</p>
+                    <a href="retreats.html" class="inline-block font-medium text-gray-700 hover:text-black">Learn More →</a>
+                </div>
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Personal Coaching</h3>
+                    <p class="mb-4">Receive personalized guidance and support on your yoga journey with one-on-one coaching sessions tailored to your specific needs and goals.</p>
+                    <a href="#contact" class="inline-block font-medium text-gray-700 hover:text-black">Learn More →</a>
                 </div>
             </div>
         </div>
@@ -219,7 +263,7 @@
             </p>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="card">
-                    <img src="Assets/pictures/image1-500x500-oxb0rca50pyalan0bl1q0sbx2bv8uykvgz2qxg49kg.jpg" alt="Retreat Location" class="w-full h-64 object-cover">
+                    <img src="Public/images/image1-500x500-oxb0rca50pyalan0bl1q0sbx2bv8uykvgz2qxg49kg.jpg" alt="Retreat Location" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold text-amber-700 mb-4">Upcoming Retreats</h3>
                         <p class="mb-4">Join us for an immersive experience that will transform your life. Limited spots available.</p>
@@ -227,7 +271,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="Assets/pictures/image2-500x500-oxb0re5tee0v8ika0luz5ruu93lzacsc58dpw01h80.jpg" alt="Yoga Practice" class="w-full h-64 object-cover">
+                    <img src="Public/images/image2-500x500-oxb0re5tee0v8ika0luz5ruu93lzacsc58dpw01h80.jpg" alt="Yoga Practice" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold text-amber-700 mb-4">Bali Bliss Retreat</h3>
                         <p class="mb-4">Join our exclusive 7-day retreat in Bali. Only 24 spots remaining out of 30. Reserve your spot today!</p>

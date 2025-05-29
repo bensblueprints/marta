@@ -1,70 +1,70 @@
-/* Teal/Mint Color Scheme for Yoga of Emotions */
+/* White Color Scheme for Yoga of Emotions */
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f0f8f8; /* Light teal background */
+    background-color: #ffffff; /* White background */
     color: #2c3e50; /* Dark slate text */
 }
 
 /* Navigation Links */
 .nav-link {
-    color: #4a9b9b !important; /* Teal text */
+    color: #333333 !important; /* Dark gray text */
 }
 
 .nav-link:hover {
-    background-color: #5fb5b5 !important; /* Lighter teal on hover */
-    color: white !important;
+    background-color: #f5f5f5 !important; /* Light gray on hover */
+    color: #000000 !important; /* Black text on hover */
 }
 
 .nav-link-active {
-    background-color: #4a9b9b !important; /* Teal background for active link */
-    color: white !important;
+    background-color: #f0f0f0 !important; /* Light gray background for active link */
+    color: #000000 !important; /* Black text for active link */
 }
 
 /* Mobile Menu Button */
 .bg-amber-100 {
-    background-color: #e0f2f2 !important; /* Light teal background */
+    background-color: #f8f8f8 !important; /* Very light gray background */
 }
 
 .text-amber-700, .text-amber-800, .text-amber-600 {
-    color: #4a9b9b !important; /* Teal text */
+    color: #333333 !important; /* Dark gray text */
 }
 
 .hover\:text-amber-800:hover {
-    color: #3a7a7a !important; /* Darker teal on hover */
+    color: #000000 !important; /* Black text on hover */
 }
 
 .hover\:bg-amber-200:hover {
-    background-color: #c5e8e8 !important; /* Lighter teal on hover */
+    background-color: #f0f0f0 !important; /* Light gray on hover */
 }
 
 .focus\:ring-amber-500:focus {
-    --tw-ring-color: #5fb5b5 !important; /* Teal ring color */
+    --tw-ring-color: #d1d1d1 !important; /* Light gray ring color */
 }
 
 /* Buttons */
 .btn-primary, .cta-button {
-    background-color: #4a9b9b !important; /* Teal background */
+    background-color: #333333 !important; /* Dark gray background */
     color: white !important;
 }
 
 .btn-primary:hover, .cta-button:hover {
-    background-color: #3a7a7a !important; /* Darker teal on hover */
+    background-color: #000000 !important; /* Black on hover */
 }
 
 /* Section Titles */
 .section-title {
-    color: #3a7a7a !important; /* Darker teal */
+    color: #333333 !important; /* Dark gray */
 }
 
 /* Gradient Text */
 .gradient-text, .bg-clip-text {
-    background-image: linear-gradient(to right, #4a9b9b, #5fb5b5) !important; /* Teal gradient */
+    background-image: linear-gradient(to right, #333333, #666666) !important; /* Gray gradient */
 }
 
 /* Hero Section */
 .bg-amber-100, .bg-amber-50, .bg-orange-50 {
-    background-color: #e0f2f2 !important; /* Light teal background */
+    background-color: #f8f8f8 !important; /* Very light gray background */
 }
 
 /* Cards */
@@ -77,77 +77,77 @@ body {
 
 /* Footer */
 .bg-amber-700 {
-    background-color: #3a7a7a !important; /* Darker teal */
+    background-color: #333333 !important; /* Dark gray */
 }
 
 .text-amber-100 {
-    color: #e0f2f2 !important; /* Light teal text */
+    color: #f8f8f8 !important; /* Very light gray text */
 }
 
 /* Testimonials */
 .border-amber-500 {
-    border-color: #5fb5b5 !important; /* Teal border */
+    border-color: #d1d1d1 !important; /* Light gray border */
 }
 
 .border-amber-200 {
-    border-color: #c5e8e8 !important; /* Light teal border */
+    border-color: #e8e8e8 !important; /* Very light gray border */
 }
 
 /* Tables */
 .divide-amber-200 {
     --tw-divide-opacity: 1;
-    border-color: rgba(197, 232, 232, var(--tw-divide-opacity)) !important;
+    border-color: rgba(232, 232, 232, var(--tw-divide-opacity)) !important;
 }
 
 .divide-amber-100 {
     --tw-divide-opacity: 1;
-    border-color: rgba(224, 242, 242, var(--tw-divide-opacity)) !important;
+    border-color: rgba(248, 248, 248, var(--tw-divide-opacity)) !important;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar-track {
-    background: #e0f2f2 !important; /* Light teal background for the track */
+    background: #f8f8f8 !important; /* Very light gray background for the track */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #4a9b9b !important; /* Teal color for the thumb */
+    background: #d1d1d1 !important; /* Light gray color for the thumb */
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #3a7a7a !important; /* Darker teal on hover */
+    background: #a0a0a0 !important; /* Medium gray on hover */
 }
 
 /* Form Elements */
 .focus\:border-amber-500:focus {
-    border-color: #5fb5b5 !important; /* Teal border color */
+    border-color: #d1d1d1 !important; /* Light gray border color */
 }
 
 /* Additional color overrides */
 .text-amber-700, .text-amber-600, .text-amber-800 {
-    color: #4a9b9b !important; /* Teal text */
+    color: #333333 !important; /* Dark gray text */
 }
 
 .bg-amber-600 {
-    background-color: #4a9b9b !important; /* Teal background */
+    background-color: #333333 !important; /* Dark gray background */
 }
 
 .hover\:bg-amber-700:hover {
-    background-color: #3a7a7a !important; /* Darker teal on hover */
+    background-color: #000000 !important; /* Black on hover */
 }
 
 .border-amber-500 {
-    border-color: #5fb5b5 !important; /* Teal border */
+    border-color: #d1d1d1 !important; /* Light gray border */
 }
 
 .from-amber-600, .to-orange-500 {
-    --tw-gradient-from: #4a9b9b !important;
-    --tw-gradient-to: #5fb5b5 !important;
+    --tw-gradient-from: #333333 !important;
+    --tw-gradient-to: #666666 !important;
 }
 
 .from-orange-300, .to-amber-400 {
-    --tw-gradient-from: #5fb5b5 !important;
-    --tw-gradient-to: #7ccece !important;
+    --tw-gradient-from: #a0a0a0 !important;
+    --tw-gradient-to: #d1d1d1 !important;
 }
 
 /* Additional classes for specific elements */
@@ -156,7 +156,7 @@ body {
 }
 
 .text-amber-100, .text-amber-200, .text-amber-300 {
-    color: #e0f2f2 !important; /* Light teal text */
+    color: #f8f8f8 !important; /* Very light gray text */
 }
 
 .hover\:text-white:hover {
@@ -164,29 +164,29 @@ body {
 }
 
 .bg-red-400 {
-    background-color: #5fb5b5 !important; /* Teal background instead of red */
+    background-color: #d1d1d1 !important; /* Light gray background instead of red */
 }
 
 .text-red-400, .text-red-500, .text-red-600 {
-    color: #5fb5b5 !important; /* Teal text instead of red */
+    color: #d1d1d1 !important; /* Light gray text instead of red */
 }
 
 .bg-green-500 {
-    background-color: #4a9b9b !important; /* Teal background instead of green */
+    background-color: #333333 !important; /* Dark gray background instead of green */
 }
 
 .text-green-500 {
-    color: #4a9b9b !important; /* Teal text instead of green */
+    color: #333333 !important; /* Dark gray text instead of green */
 }
 
 /* Border colors */
 .border-t-4.border-amber-500, .border-t-4.border-red-400 {
-    border-top-color: #5fb5b5 !important; /* Teal border */
+    border-top-color: #d1d1d1 !important; /* Light gray border */
 }
 
 /* Hover effects */
 .hover\:shadow-xl:hover, .hover\:shadow-2xl:hover, .hover\:shadow-3xl:hover {
-    box-shadow: 0 20px 25px -5px rgba(74, 155, 155, 0.1), 0 10px 10px -5px rgba(74, 155, 155, 0.04) !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
 }
 
 /* Transitions */

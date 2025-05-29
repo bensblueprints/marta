@@ -34,3 +34,5 @@ build/
 
 # Keep the video file for now since it's part of the project
 !marta\ Video\ intro.mp4 
+# Local Netlify folder
+.netlify
