@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <script src="chakra-effects.js" defer></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -286,38 +287,45 @@
                 </div>
             </section>
 
-            <!-- Testimonials Section -->
-            <section id="testimonials" class="mb-16">
-                <h2 class="section-title">What Our Students Say</h2>
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="card p-6 text-center">
-                        <img src="Assets/pictures/Profile-Picture-8-Marta-Metrass-oc73p8amokzmn6dnq61gqv6ofthcpfnmm46lasr5ds.jpg" alt="Student Avatar" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
-                        <p class="text-gray-600 italic mb-4">"Marta's online classes have been a lifeline during challenging times. The Yoga of Emotions® method has helped me process feelings I didn't even know I was holding onto."</p>
-                        <p class="font-semibold text-amber-700">- Sarah K.</p>
+            <!-- Testimonials & FAQ Section -->
+            <section id="testimonials" class="mb-16 bg-amber-50 py-12 rounded-lg">
+                <div class="max-w-6xl mx-auto px-6">
+                    <h2 class="section-title">What Our Students Say</h2>
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+                        <div class="card p-6 text-center">
+                            <img src="Assets/pictures/Profile-Picture-8-Marta-Metrass-oc73p8amokzmn6dnq61gqv6ofthcpfnmm46lasr5ds.jpg" alt="Student Avatar" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                            <p class="text-gray-600 italic mb-4">"Marta's online classes have been a lifeline during challenging times. The Yoga of Emotions® method has helped me process feelings I didn't even know I was holding onto."</p>
+                            <p class="font-semibold text-amber-700">- Sarah K.</p>
+                        </div>
+                        <div class="card p-6 text-center">
+                            <img src="Assets/pictures/Profile-Picture-4-Marta-Metrass-oc73p0rx5wpc2aoky2sg6x2zoqiezutrx2ypgl2ark.jpg" alt="Student Avatar" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                            <p class="text-gray-600 italic mb-4">"I was skeptical about online yoga classes, but the energy Marta brings through the screen is incredible. I feel just as connected as I would in person."</p>
+                            <p class="font-semibold text-amber-700">- Michael T.</p>
+                        </div>
                     </div>
-                    <div class="card p-6 text-center">
-                        <img src="Assets/pictures/Profile-Picture-4-Marta-Metrass-oc73p0rx5wpc2aoky2sg6x2zoqiezutrx2ypgl2ark.jpg" alt="Student Avatar" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
-                        <p class="text-gray-600 italic mb-4">"I was skeptical about online yoga classes, but the energy Marta brings through the screen is incredible. I feel just as connected as I would in person."</p>
-                        <p class="font-semibold text-amber-700">- Michael T.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- FAQ Section -->
-            <section id="faq" class="mb-16">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <div class="max-w-3xl mx-auto space-y-4">
-                    <div class="card p-6">
-                        <h3 class="text-lg font-semibold text-amber-700">What equipment do I need for online classes?</h3>
-                        <p class="text-gray-600 mt-1">A yoga mat, comfortable clothing, and a reliable internet connection are all you need. Props like blocks and straps are helpful but not required.</p>
-                    </div>
-                    <div class="card p-6">
-                        <h3 class="text-lg font-semibold text-amber-700">How do I join the live classes?</h3>
-                        <p class="text-gray-600 mt-1">After booking, you'll receive a confirmation email with a secure link to join the class. Simply click the link a few minutes before the class starts.</p>
-                    </div>
-                    <div class="card p-6">
-                        <h3 class="text-lg font-semibold text-amber-700">Can I access recordings if I miss a live class?</h3>
-                        <p class="text-gray-600 mt-1">Yes! All live classes are recorded and available for 7 days after the session for registered participants.</p>
+                    
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div id="faq" class="max-w-3xl mx-auto space-y-6">
+                        <div class="card p-6">
+                            <h3 class="text-lg font-semibold text-amber-700">What equipment do I need for online classes?</h3>
+                            <p class="text-gray-600 mt-2">A yoga mat, comfortable clothing, and a reliable internet connection are all you need. Props like blocks and straps are helpful but not required.</p>
+                        </div>
+                        <div class="card p-6">
+                            <h3 class="text-lg font-semibold text-amber-700">How do I join the live classes?</h3>
+                            <p class="text-gray-600 mt-2">After booking, you'll receive a confirmation email with a secure link to join the class. Simply click the link a few minutes before the class starts.</p>
+                        </div>
+                        <div class="card p-6">
+                            <h3 class="text-lg font-semibold text-amber-700">Can I access recordings if I miss a live class?</h3>
+                            <p class="text-gray-600 mt-2">Yes! All live classes are recorded and available for 7 days after the session for registered participants.</p>
+                        </div>
+                        <div class="card p-6">
+                            <h3 class="text-lg font-semibold text-amber-700">Do you offer private sessions?</h3>
+                            <p class="text-gray-600 mt-2">Yes, private sessions are available for those seeking personalized guidance. These sessions are tailored to your specific needs and goals.</p>
+                        </div>
+                        <div class="card p-6">
+                            <h3 class="text-lg font-semibold text-amber-700">Is there a community aspect to the online classes?</h3>
+                            <p class="text-gray-600 mt-2">Absolutely! We have a private online community where students can connect, share experiences, and support each other on their yoga journey.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -370,16 +378,18 @@
     </footer>
 
     <script>
-        const menuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelectorAll('.nav-link'); // For active state, if needed later
-
-        menuButton.addEventListener('click', () => {
-            const expanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
-            menuButton.setAttribute('aria-expanded', !expanded);
-            mobileMenu.classList.toggle('hidden');
-            // Toggle icons
-            menuButton.querySelectorAll('svg').forEach(icon => icon.classList.toggle('hidden'));
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.nav-link'); // For active state, if needed later
+    
+            menuButton.addEventListener('click', () => {
+                const expanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
+                menuButton.setAttribute('aria-expanded', !expanded);
+                mobileMenu.classList.toggle('hidden');
+                // Toggle icons
+                menuButton.querySelectorAll('svg').forEach(icon => icon.classList.toggle('hidden'));
+            });
         });
     </script>
 </body>
